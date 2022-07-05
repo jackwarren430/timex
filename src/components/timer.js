@@ -1,9 +1,8 @@
-import './timer.css';
+import './Timer.css';
 
-const timer = (props) => {
-    return (
-        <>
-            <h1>{props.cur_time}</h1>
-        </>
-    );
+const Timer = (props) => {
+
+    <h1>{props.cur_time}</h1>
 }
+
+export default Timer;

@@ -1,29 +1,30 @@
 import './App.css';
-import timex_logo from './components/timex_logo.js';
-import {useState } from 'react';
+import Timex_logo from './components/Timex_logo.js';
+import Timer from './components/Timer.js';
+import { useState, useEffect } from 'react';
 
 const App = () => {
+  
+  const [main_menu_display, setMain_menu_display] = useState(true);
 
-  const name = 'John';
-  var main_menu_display = true;
+  useEffect(() => {
+    
+  }, [main_menu_display]);
 
   return (
     <div className="App">
 
-      
-      <h1>Hello {name}</h1>
-
       {main_menu_display ? (
         <>
-          <timex_logo />
+          < Timex_logo />
           <h2>menu</h2>
-          <button>start</button>
-          <timer cur_time={100}/>
+          <button onClick={() => setMain_menu_display(false)}>start</button>
+          <Timer cur_time={100}/>
         </>
       ) : (
         <>
           <h2>game</h2>
-          <button>menu</button>
+          <button onClick={() => setMain_menu_display(true)}>menu</button>
         </>
       )}
       
