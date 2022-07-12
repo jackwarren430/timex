@@ -24,6 +24,7 @@ const App = () => {
       ) : (
         <>
           <h2>game</h2>
+          < Timer />
           <button onClick={() => setMain_menu_display(true)}>menu</button>
         </>
       )}
